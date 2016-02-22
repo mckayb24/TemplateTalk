@@ -17,10 +17,9 @@
 				{{end}}
 			</ul>
 		</div>
-		{{block "content" .Content}}
-			<div>
-				This is the default content
-			</div>
-		{{end}}
+		{{template "content" .Content}}
 	</body>
 </html>
+
+{{define "content"}}
+{{end}}
