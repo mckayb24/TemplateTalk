@@ -1,0 +1,26 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Template Tutorial</title>
+	</head>
+	<body>
+		<div>
+			<pre>
+				This is on every page no matter what.
+				We don't want to have to copy it anywhere.
+			</pre>
+		</div>
+		<div>
+			<ul>
+				{{range .Links}}
+				<li><a href="{{.Pattern}}">{{.Name}}</a></li>
+				{{end}}
+			</ul>
+		</div>
+		{{block "content" .Content}}
+			<div>
+				This is the default content
+			</div>
+		{{end}}
+	</body>
+</html>
